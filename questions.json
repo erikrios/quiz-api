@@ -1,8 +1,102 @@
 {
-  "1" : {
+  "1": {
     "id": "1",
-    "title": "How?",
-    "content": "Please help!",
-    "tags": ["general"]
+    "title": "How to learn Rust?",
+    "content": "I'm new to Rust and want to learn the basics. Where should I start?",
+    "tags": [
+      "rust",
+      "beginner",
+      "learning"
+    ]
+  },
+  "2": {
+    "id": "2",
+    "title": "What is ownership in Rust?",
+    "content": "Can someone explain Rust's ownership system in simple terms?",
+    "tags": [
+      "rust",
+      "ownership",
+      "memory"
+    ]
+  },
+  "3": {
+    "id": "3",
+    "title": "Difference between struct and enum?",
+    "content": "When should I use a struct vs an enum in Rust?",
+    "tags": [
+      "rust",
+      "struct",
+      "enum"
+    ]
+  },
+  "4": {
+    "id": "4",
+    "title": "How to handle errors gracefully?",
+    "content": "I want to understand when to use Result vs Option in Rust.",
+    "tags": [
+      "rust",
+      "error-handling",
+      "result"
+    ]
+  },
+  "5": {
+    "id": "5",
+    "title": "What is the borrow checker?",
+    "content": "I'm getting borrow checker errors — how can I reason about them?",
+    "tags": [
+      "rust",
+      "borrow-checker",
+      "compiler"
+    ]
+  },
+  "6": {
+    "id": "6",
+    "title": "How to use async in Rust?",
+    "content": "Can I write concurrent code easily using async/await in Rust?",
+    "tags": [
+      "rust",
+      "async",
+      "concurrency"
+    ]
+  },
+  "7": {
+    "id": "7",
+    "title": "What are traits?",
+    "content": "How do traits compare to interfaces in other languages?",
+    "tags": [
+      "rust",
+      "traits",
+      "oop"
+    ]
+  },
+  "8": {
+    "id": "8",
+    "title": "How to use Cargo efficiently?",
+    "content": "What are some useful Cargo commands for managing dependencies?",
+    "tags": [
+      "rust",
+      "cargo",
+      "tooling"
+    ]
+  },
+  "9": {
+    "id": "9",
+    "title": "How to write unit tests in Rust?",
+    "content": "I want to test my functions — how do I structure test modules?",
+    "tags": [
+      "rust",
+      "testing",
+      "unit-tests"
+    ]
+  },
+  "10": {
+    "id": "10",
+    "title": "What is lifetimes in Rust?",
+    "content": "Lifetimes seem hard to understand — can you explain them simply?",
+    "tags": [
+      "rust",
+      "lifetimes",
+      "references"
+    ]
   }
 }
