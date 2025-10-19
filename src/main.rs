@@ -1,6 +1,7 @@
-use std::collections::HashMap;
+use std::{collections::HashMap, sync::Arc};
 
 use serde::{Deserialize, Serialize};
+use tokio::sync::RwLock;
 use warp::{
     Filter,
     filters::cors::CorsForbidden,
@@ -22,13 +23,13 @@ struct QuestionId(String);
 
 #[derive(Clone)]
 struct Store {
-    questions: HashMap<QuestionId, Question>,
+    questions: Arc<RwLock<HashMap<QuestionId, Question>>>,
 }
 
 impl Store {
     fn new() -> Self {
         Self {
-            questions: Store::init(),
+            questions: Arc::new(RwLock::new(Store::init())),
         }
     }
 
@@ -67,11 +68,11 @@ async fn get_questions(
 ) -> Result<impl Reply, Rejection> {
     if !params.is_empty() {
         let pagination = extract_pagination(params)?;
-        let res: Vec<Question> = store.questions.values().cloned().collect();
+        let res: Vec<Question> = store.questions.read().await.values().cloned().collect();
         let res = &res[pagination.start..pagination.end];
         Ok(warp::reply::json(&res))
     } else {
-        let res: Vec<Question> = store.questions.values().cloned().collect();
+        let res: Vec<Question> = store.questions.read().await.values().cloned().collect();
         Ok(warp::reply::json(&res))
     }
 }
